@@ -54,7 +54,7 @@ export const FilterForm = ({ criteria, setCriteria, genres }) => {
 
   return (
     <Paper>
-      <form className={classes.form} onSubmit={handleSubmit} >
+      <form data-testid="filter-form" className={classes.form} onSubmit={handleSubmit} >
         <TextField variant="outlined" label="search" name="terms" placeholder="name/city/genre" className={classes.input} onChange={handleChange}/>
         <div>
           <FormControl className={classes.select} >

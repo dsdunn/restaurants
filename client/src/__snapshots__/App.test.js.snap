@@ -1,0 +1,219 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App> should match the snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiBox-root MuiBox-root-2"
+  >
+    <div
+      class="MuiContainer-root App MuiContainer-maxWidthLg"
+    >
+      <h1
+        class="MuiTypography-root MuiTypography-h1 MuiTypography-gutterBottom MuiTypography-alignCenter"
+      >
+        Restaurants
+      </h1>
+      <div
+        class="MuiPaper-root MuiPaper-elevation1 MuiPaper-rounded"
+      >
+        <form
+          class="makeStyles-form-41"
+          data-testid="filter-form"
+        >
+          <div
+            class="MuiFormControl-root MuiTextField-root makeStyles-input-43"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+              data-shrink="false"
+            >
+              search
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+            >
+              <input
+                aria-invalid="false"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                name="terms"
+                placeholder="name/city/genre"
+                type="text"
+                value=""
+              />
+              <fieldset
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-130 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="PrivateNotchedOutline-legendLabelled-132"
+                >
+                  <span>
+                    search
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+          </div>
+          <div>
+            <div
+              class="MuiFormControl-root makeStyles-select-42"
+            >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink"
+                data-shrink="true"
+                id="state-input-label"
+              >
+                State
+              </label>
+              <div
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+              >
+                <div
+                  aria-haspopup="listbox"
+                  aria-labelledby="state-input-label state-input"
+                  class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+                  id="state-input"
+                  role="button"
+                  tabindex="0"
+                >
+                  All
+                </div>
+                <input
+                  name="state"
+                  type="hidden"
+                  value=""
+                />
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSelect-icon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M7 10l5 5 5-5z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div
+              class="MuiFormControl-root makeStyles-select-42"
+            >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink"
+                data-shrink="true"
+                id="genre-input-label"
+              >
+                Genre
+              </label>
+              <div
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+              >
+                <div
+                  aria-haspopup="listbox"
+                  aria-labelledby="genre-input-label genre-input"
+                  class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+                  id="genre-input"
+                  role="button"
+                  tabindex="0"
+                >
+                  All
+                </div>
+                <input
+                  name="genre"
+                  type="hidden"
+                  value=""
+                />
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSelect-icon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M7 10l5 5 5-5z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-input-43"
+            tabindex="0"
+            type="submit"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              Search
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+        </form>
+      </div>
+      <div
+        data-testid="restaurants-table"
+      >
+        <div
+          class="pagination"
+        />
+        <div
+          class="MuiPaper-root MuiTableContainer-root MuiPaper-elevation1 MuiPaper-rounded"
+        >
+          <table
+            class="MuiTable-root"
+          >
+            <thead
+              class="MuiTableHead-root"
+            >
+              <tr
+                class="MuiTableRow-root MuiTableRow-head"
+              >
+                <th
+                  class="MuiTableCell-root MuiTableCell-head"
+                  scope="col"
+                >
+                  Name
+                </th>
+                <th
+                  class="MuiTableCell-root MuiTableCell-head"
+                  scope="col"
+                >
+                  Location
+                </th>
+                <th
+                  class="MuiTableCell-root MuiTableCell-head"
+                  scope="col"
+                >
+                  Phone
+                </th>
+                <th
+                  class="MuiTableCell-root MuiTableCell-head"
+                  scope="col"
+                >
+                  Genres
+                </th>
+              </tr>
+            </thead>
+            <tbody
+              class="MuiTableBody-root"
+            >
+              <tr
+                class="MuiTableRow-root"
+              >
+                <td
+                  class="MuiTableCell-root MuiTableCell-body"
+                  colspan="4"
+                >
+                  Sorry, no restaurants match your search criteria
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
