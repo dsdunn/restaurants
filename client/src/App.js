@@ -5,8 +5,35 @@ import { Pagination } from '@material-ui/lab';
 import { FilterForm } from './components/FilterForm';
 import { RestaurantsTable } from './components/RestaurantsTable';
 
+import { getRestaurants } from './fetch';
+import { filter } from './utils';
 
 function App() {
+  const [ allRestaurants, setAllRestaurants ] = useState([]);
+  const [ filteredRestaurants, setFilteredRestaurants ] = useState([]);
+  const [ criteria, setCriteria ] = useState({
+    terms: '',
+    city: '',
+    genre: ''
+  });
+  const [ page, setPage ] = useState(1);
+
+  useEffect(() => {
+    const init = async() => {
+      let restaurants = await getRestaurants();
+
+      setAllRestaurants(restaurants);
+    }
+
+    init();
+  }, [])
+
+  useEffect(() => {
+    let filtered = filter(allRestaurants, criteria)
+
+    setFilteredRestaurants(filtered);
+  })
+
   return (
     <Box>
       <Container className="App">
@@ -15,7 +42,7 @@ function App() {
         <div className="pagination">
           <Pagination count={3}/>
         </div>
-        <RestaurantsTable />
+        <RestaurantsTable filteredRestaurants={filteredRestaurants} />
       </Container>
     </Box>
   );

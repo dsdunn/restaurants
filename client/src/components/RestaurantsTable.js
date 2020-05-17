@@ -1,10 +1,10 @@
 import React from 'react';
 import { Table, TableContainer, TableHead, TableBody, TableRow, TableCell, Paper } from '@material-ui/core';
 
-
 const rows = ['', '', '', ''];
 
 export const RestaurantsTable = ( filteredRestaurants ) => {
+  console.log(filteredRestaurants);
   return (
     <TableContainer component={Paper} >
       <Table>
