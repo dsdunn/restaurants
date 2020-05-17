@@ -14,8 +14,8 @@ function App() {
   const [ genres, setGenres ] = useState([]);
   const [ criteria, setCriteria ] = useState({
     terms: '',
-    state: 'all',
-    genre: 'all'
+    state: '',
+    genre: ''
   });
   const [ page, setPage ] = useState(1);
 

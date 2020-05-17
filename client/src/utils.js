@@ -22,7 +22,7 @@ export const getGenres = (restaurants = []) => {
 
       genreReducer(genreList);
 
-      joint.genre = genreList.join(', ');
+      joint.genre = genreList.sort().join(', ');
     }
   })
   return ({
