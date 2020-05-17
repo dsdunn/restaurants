@@ -59,7 +59,7 @@ export const FilterForm = ({ criteria, setCriteria, genres }) => {
         <div>
           <FormControl className={classes.select} >
             <InputLabel shrink id="state-input-label">State</InputLabel>
-            <Select id="state" name="state" value={criteria.state || ""} id="state-input" labelId="state-input-label" displayEmpty onChange={handleChange}>
+            <Select id="state-input" inputProps={{"data-testid": "state-input"}} name="state" value={criteria.state || ""} labelId="state-input-label" displayEmpty onChange={handleChange}>
               <MenuItem key="all" value="" >All</MenuItem>
               { statesSet.map(state => {
                 return (

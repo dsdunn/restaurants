@@ -8,10 +8,6 @@ import App from './App';
 jest.mock('./fetch');
 jest.mock('./utils');
 
-// getRestaurantsAndGenres.mockResolvedValueOnce({restaurants: [], genres: []})
-
-// const mockGetRestaurants = jest.fn(() => Promise.resolve([{ data: 'some data'}]));
-
 describe('<App>', () => {
   let promise;
 
@@ -44,16 +40,16 @@ describe('<App>', () => {
   })
 
   it('should render the FilterForm', async () => {
-    render( <App />);
-    const element = screen.getByTestId('filter-form');
+    const { getByTestId } = render( <App />);
+    const element = getByTestId('filter-form');
 
     expect(element).toBeTruthy();
     await act(() => promise);
   })
 
   it('should render the Restaurants Table', async () => {
-    render( <App />);
-    const element = screen.getByTestId('restaurants-table');
+    const { getByTestId } = render( <App />);
+    const element = getByTestId('restaurants-table');
 
     expect(element).toBeTruthy();
     await act(() => promise);

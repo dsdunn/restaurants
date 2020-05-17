@@ -79,6 +79,7 @@ exports[`<App> should match the snapshot 1`] = `
                   All
                 </div>
                 <input
+                  data-testid="state-input"
                   name="state"
                   type="hidden"
                   value=""

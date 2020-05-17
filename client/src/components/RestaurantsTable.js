@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Table, TableContainer, TableHead, TableBody, TableRow, TableCell, Paper } from '@material-ui/core';
 import { Pagination } from '@material-ui/lab';
 
-export const RestaurantsTable = ({ filteredRestaurants } = [] ) => {
+export const RestaurantsTable = ({ filteredRestaurants = [] }) => {
   const [ page, setPage ] = useState(1);
 
   useEffect(() => {
