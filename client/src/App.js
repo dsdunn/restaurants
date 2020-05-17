@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Box, Container, Typography } from '@material-ui/core';
+import { Pagination } from '@material-ui/lab';
 
 import { FilterForm } from './components/FilterForm';
-import { PageControl } from './components/Pagination';
 import { RestaurantsTable } from './components/RestaurantsTable';
 
 
@@ -10,9 +10,11 @@ function App() {
   return (
     <Box>
       <Container className="App">
-        <Typography variant="h1">Restaurants</Typography>
+        <Typography variant="h1" align="center" gutterBottom >Restaurants</Typography>
         <FilterForm />
-        <PageControl />
+        <div className="pagination">
+          <Pagination count={3}/>
+        </div>
         <RestaurantsTable />
       </Container>
     </Box>
