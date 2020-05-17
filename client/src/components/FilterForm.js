@@ -1,6 +1,8 @@
 import React from 'react';
 import { Paper, TextField, Select, InputLabel, FormControl, Button, MenuItem, makeStyles } from '@material-ui/core';
 
+import { states } from '../states';
+
 const useStyles = makeStyles({
   form: {
     display: 'flex',
@@ -20,7 +22,8 @@ const useStyles = makeStyles({
 })
 
 
-export const FilterForm = () => {
+export const FilterForm = ({ criteria, setCriteria, genres }) => {
+
   const classes = useStyles();
 
   return (
@@ -31,13 +34,25 @@ export const FilterForm = () => {
           <FormControl className={classes.select} >
             <InputLabel shrink >State</InputLabel>
             <Select id="state">
-              <MenuItem key="all" value={'All'} selected >All</MenuItem>
+              <MenuItem key="all" value={criteria.state} >All</MenuItem>
+              { states.map(state => {
+                return (
+                  <MenuItem value={state}>{state}</MenuItem>
+                  )
+                })
+              }
             </Select>
           </FormControl>
           <FormControl className={classes.select}>
             <InputLabel shrink>Genre</InputLabel>
             <Select id="genre">
               <MenuItem key="all" value={'All'}>All</MenuItem>
+              { genres.map(genre => {
+                return (
+                  <MenuItem value={genre}>{genre}</MenuItem>
+                  )
+                })
+              }
             </Select>
           </FormControl>
         </div>

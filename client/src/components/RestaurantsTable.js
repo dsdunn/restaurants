@@ -1,10 +1,19 @@
 import React from 'react';
 import { Table, TableContainer, TableHead, TableBody, TableRow, TableCell, Paper } from '@material-ui/core';
 
-const rows = ['', '', '', ''];
+export const RestaurantsTable = ({ filteredRestaurants } = [] ) => {
 
-export const RestaurantsTable = ( filteredRestaurants ) => {
-  console.log(filteredRestaurants);
+  const rows = filteredRestaurants.map((joint, index) => {
+    return  (
+      <TableRow key={index}>
+        <TableCell>{joint.name}</TableCell>
+        <TableCell>{`${joint.city}, ${joint.state}`}</TableCell>
+        <TableCell>{joint.telephone}</TableCell>
+        <TableCell>{joint.genre}</TableCell>
+      </TableRow>
+      )
+  })
+
   return (
     <TableContainer component={Paper} >
       <Table>
@@ -17,16 +26,11 @@ export const RestaurantsTable = ( filteredRestaurants ) => {
           </TableRow>
         </TableHead>
         <TableBody>
-          { rows.map((row, index) => {
-            return  (
-              <TableRow key={index}>
-                <TableCell>Arby's</TableCell>
-                <TableCell>Kingston, AL</TableCell>
-                <TableCell>592-222-8765</TableCell>
-                <TableCell>cheep garbage</TableCell>
+          { rows.length ? rows
+            : <TableRow>
+                <TableCell>Sorry, no restaurants match your search criteria</TableCell>
               </TableRow>
-              )
-          })}
+          }
         </TableBody>
       </Table>
     </TableContainer>

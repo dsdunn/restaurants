@@ -27,6 +27,6 @@ export const getGenres = (restaurants = []) => {
   })
   return ({
     formattedRestaurants: restaurants,
-    genres
+    genres: genres.sort()
   });
 }

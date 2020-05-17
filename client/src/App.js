@@ -6,23 +6,26 @@ import { FilterForm } from './components/FilterForm';
 import { RestaurantsTable } from './components/RestaurantsTable';
 
 import { getRestaurants } from './fetch';
-import { filter } from './utils';
+import { filter, getGenres } from './utils';
 
 function App() {
   const [ allRestaurants, setAllRestaurants ] = useState([]);
   const [ filteredRestaurants, setFilteredRestaurants ] = useState([]);
+  const [ genres, setGenres ] = useState([]);
   const [ criteria, setCriteria ] = useState({
     terms: '',
-    city: '',
-    genre: ''
+    state: 'all',
+    genre: 'all'
   });
   const [ page, setPage ] = useState(1);
 
   useEffect(() => {
     const init = async() => {
       let restaurants = await getRestaurants();
+      let { formattedRestaurants, genres } = getGenres(restaurants);
 
-      setAllRestaurants(restaurants);
+      setAllRestaurants(formattedRestaurants);
+      setGenres(genres);
     }
 
     init();
@@ -38,7 +41,7 @@ function App() {
     <Box>
       <Container className="App">
         <Typography variant="h1" align="center" gutterBottom >Restaurants</Typography>
-        <FilterForm />
+        <FilterForm criteria={criteria} setCriteria={setCriteria} genres={genres}/>
         <div className="pagination">
           <Pagination count={3}/>
         </div>
