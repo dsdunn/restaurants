@@ -33,6 +33,7 @@ export const FilterForm = ({ criteria, setCriteria, genres }) => {
 
     if (name === "terms") {
       setTerms(value)
+      if (!value) updateCriteria({name: 'terms', value});
       return;
     };
 

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Box, Container, Typography } from '@material-ui/core';
-import { Pagination } from '@material-ui/lab';
 
 import { FilterForm } from './components/FilterForm';
 import { RestaurantsTable } from './components/RestaurantsTable';
@@ -17,7 +16,6 @@ function App() {
     state: '',
     genre: ''
   });
-  const [ page, setPage ] = useState(1);
 
   useEffect(() => {
     const init = async() => {
@@ -43,9 +41,6 @@ function App() {
       <Container className="App">
         <Typography variant="h1" align="center" gutterBottom >Restaurants</Typography>
         <FilterForm criteria={criteria} setCriteria={setCriteria} genres={genres}/>
-        <div className="pagination">
-          <Pagination count={3}/>
-        </div>
         <RestaurantsTable filteredRestaurants={filteredRestaurants} />
       </Container>
     </Box>

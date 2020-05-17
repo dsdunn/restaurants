@@ -5,9 +5,7 @@ export const filter = (restaurants, criteria = {}) => {
     })
   }
 
-  return restaurants.sort((jointA, jointB) => {
-    return jointA.name > jointB.name ? 1 : -1;
-  })
+  return restaurants;
 };
 
 export const getRestaurantsAndGenres = (restaurants = []) => {
@@ -31,6 +29,11 @@ export const getRestaurantsAndGenres = (restaurants = []) => {
       joint.genre = genreList.sort().join(', ');
     }
   })
+
+  restaurants.sort((jointA, jointB) => {
+    return jointA.name > jointB.name ? 1 : -1;
+  });
+  
   return ({
     formattedRestaurants: restaurants,
     genres: genres.sort()
