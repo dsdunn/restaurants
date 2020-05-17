@@ -6,7 +6,7 @@ import { FilterForm } from './components/FilterForm';
 import { RestaurantsTable } from './components/RestaurantsTable';
 
 import { getRestaurants } from './fetch';
-import { filter, getGenres } from './utils';
+import { filter, getRestaurantsAndGenres } from './utils';
 
 function App() {
   const [ allRestaurants, setAllRestaurants ] = useState([]);
@@ -22,9 +22,10 @@ function App() {
   useEffect(() => {
     const init = async() => {
       let restaurants = await getRestaurants();
-      let { formattedRestaurants, genres } = getGenres(restaurants);
+      let { formattedRestaurants, genres } = getRestaurantsAndGenres(restaurants);
 
       setAllRestaurants(formattedRestaurants);
+      setFilteredRestaurants(formattedRestaurants);
       setGenres(genres);
     }
 
@@ -35,7 +36,7 @@ function App() {
     let filtered = filter(allRestaurants, criteria)
 
     setFilteredRestaurants(filtered);
-  })
+  }, [criteria])
 
   return (
     <Box>
