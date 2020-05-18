@@ -17,7 +17,7 @@ describe('<FilterForm />', () => {
     expect(<FilterForm />).toMatchSnapshot();
   })
 
-  it('has a genre select', () => {
+  it('has working genre select', () => {
     let { getByTestId } = render(<FilterForm {...mockProps} />)
     let element = getByTestId('genre-input');
 
@@ -29,7 +29,7 @@ describe('<FilterForm />', () => {
     expect(element.value).toBe('French');
   }) 
 
-  it('has a state select', () => {
+  it('has working state select', () => {
     let { getByTestId } = render(<FilterForm {...mockProps} />)
     let element = getByTestId('state-input');
 
@@ -41,7 +41,7 @@ describe('<FilterForm />', () => {
     expect(element.value).toBe('CA');
   })
 
-  it('has a searchfield', () => {
+  it('has working searchfield', () => {
     let { getByTestId } = render(<FilterForm {...mockProps} />)
     let element = getByTestId('terms-input');
 

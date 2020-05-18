@@ -35,7 +35,7 @@ export const RestaurantsTable = ({ filteredRestaurants = [] }) => {
     <div data-testid="restaurants-table">
       <div className="pagination">
         { numPages > 1 && 
-          <Pagination count={numPages} page={page} onChange={handleChange}/>
+          <Pagination data-testid="pagination" count={numPages} page={page} onChange={handleChange}/>
         }
       </div>
       <TableContainer component={Paper} >
