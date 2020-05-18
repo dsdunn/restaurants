@@ -55,7 +55,7 @@ export const FilterForm = ({ criteria, setCriteria, genres }) => {
   return (
     <Paper>
       <form data-testid="filter-form" className={classes.form} onSubmit={handleSubmit} >
-        <TextField variant="outlined" label="search" name="terms" placeholder="name/city/genre" className={classes.input} onChange={handleChange}/>
+        <TextField id="terms-input" inputProps={{"data-testid": "terms-input"}} variant="outlined" label="search" name="terms" placeholder="name/city/genre" className={classes.input} onChange={handleChange}/>
         <div>
           <FormControl className={classes.select} >
             <InputLabel shrink id="state-input-label">State</InputLabel>
@@ -71,7 +71,7 @@ export const FilterForm = ({ criteria, setCriteria, genres }) => {
           </FormControl>
           <FormControl className={classes.select}>
             <InputLabel shrink id="genre-input-label">Genre</InputLabel>
-            <Select id="genre" name="genre" value={criteria.genre || ""} id="genre-input" labelId="genre-input-label" displayEmpty onChange={handleChange}>
+            <Select id="genre" inputProps={{"data-testid": "genre-input"}} name="genre" value={criteria.genre || ""} id="genre-input" labelId="genre-input-label" displayEmpty onChange={handleChange}>
               <MenuItem key="all" value="">All</MenuItem>
               { genres.map(genre => {
                 return (
@@ -82,7 +82,7 @@ export const FilterForm = ({ criteria, setCriteria, genres }) => {
             </Select>
           </FormControl>
         </div>
-        <Button variant="contained" type="submit" className={classes.input}>Search</Button>
+        <Button data-testid="filter-form-submit-button" variant="contained" type="submit" className={classes.input}>Search</Button>
       </form>
     </Paper>
     )

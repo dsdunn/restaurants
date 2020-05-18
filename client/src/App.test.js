@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, cleanup, act, screen } from '@testing-library/react';
+import { render, act, screen } from '@testing-library/react';
 import { getRestaurants } from './fetch';
 import { filter, getRestaurantsAndGenres } from './utils';
 
@@ -14,10 +14,6 @@ describe('<App>', () => {
   beforeEach(() => {
     promise = Promise.resolve()
   })
-
-  afterEach(() => {
-    cleanup;
-  });
 
   it('should match the snapshot', async () => {
     const { asFragment } = render( <App />);
@@ -54,4 +50,27 @@ describe('<App>', () => {
     expect(element).toBeTruthy();
     await act(() => promise);
   })
+
+  it('should render the Restaurants Table', async () => {
+    const { getByTestId } = render( <App />);
+    let element = getByTestId('genre-input');
+
+    expect(element).toBeTruthy();
+    await act(() => promise);
+  })
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

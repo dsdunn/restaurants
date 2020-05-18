@@ -26,6 +26,8 @@ exports[`<App> should match the snapshot 1`] = `
             <label
               class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
               data-shrink="false"
+              for="terms-input"
+              id="terms-input-label"
             >
               search
             </label>
@@ -35,6 +37,8 @@ exports[`<App> should match the snapshot 1`] = `
               <input
                 aria-invalid="false"
                 class="MuiInputBase-input MuiOutlinedInput-input"
+                data-testid="terms-input"
+                id="terms-input"
                 name="terms"
                 placeholder="name/city/genre"
                 type="text"
@@ -120,6 +124,7 @@ exports[`<App> should match the snapshot 1`] = `
                   All
                 </div>
                 <input
+                  data-testid="genre-input"
                   name="genre"
                   type="hidden"
                   value=""
@@ -139,6 +144,7 @@ exports[`<App> should match the snapshot 1`] = `
           </div>
           <button
             class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-input-43"
+            data-testid="filter-form-submit-button"
             tabindex="0"
             type="submit"
           >
