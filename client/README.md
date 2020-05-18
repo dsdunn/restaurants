@@ -1,3 +1,15 @@
+A simple Web application to view and filter restaurant results. 
+
+For dev:
+Clone this repo, 
+In terminal, run `cd client && npm install`, then `npm start`.
+For tests, run `npm test`.
+
+Built with React and a little help from [Material UI](https://material-ui.com/).
+Tested with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro) and [Jest](https://jestjs.io/docs/en/getting-started)
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
