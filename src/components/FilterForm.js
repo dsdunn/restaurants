@@ -71,7 +71,7 @@ export const FilterForm = ({ criteria, setCriteria, genres }) => {
           </FormControl>
           <FormControl className={classes.select}>
             <InputLabel shrink id="genre-input-label">Genre</InputLabel>
-            <Select id="genre" inputProps={{"data-testid": "genre-input"}} name="genre" value={criteria.genre || ""} id="genre-input" labelId="genre-input-label" displayEmpty onChange={handleChange}>
+            <Select id="genre-input" inputProps={{"data-testid": "genre-input"}} name="genre" value={criteria.genre || ""} labelId="genre-input-label" displayEmpty onChange={handleChange}>
               <MenuItem key="all" value="">All</MenuItem>
               { genres.map(genre => {
                 return (

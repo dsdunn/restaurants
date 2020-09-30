@@ -18,7 +18,7 @@ function App() {
   });
 
   useEffect(() => {
-    const init = async() => {
+    const init = async () => {
       let restaurants = await getRestaurants();
       let { formattedRestaurants, genres } = getRestaurantsAndGenres(restaurants);
 
@@ -34,7 +34,7 @@ function App() {
     let filtered = filter(allRestaurants, criteria)
 
     setFilteredRestaurants(filtered);
-  }, [criteria])
+  }, [criteria, allRestaurants])
 
   return (
     <Box>
