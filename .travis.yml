@@ -16,7 +16,7 @@ deploy:
   # Keep builded pages
   skip-cleanup: true
   # Directory where your generated files are located
-  local_dir: public
+  local_dir: build
   # Github security/auth token
   github_token: $DEPLOY_TOKEN
   edge: true
