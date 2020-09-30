@@ -7,7 +7,7 @@ cache:
     - public
     - .cache
 script:
-  - npm build # Generate static HTML files
+  - npm run build # Generate static HTML files
 
 # Here is the magic part
 deploy:
