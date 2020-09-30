@@ -1,7 +1,7 @@
 import React from 'react';
 import { filter, getRestaurantsAndGenres } from './utils';
 import { getRestaurants } from './fetch';
-import { testJoints, longList } from './__mocks__/testData';
+import { testJoints, longList } from './__mocks__/testdata';
 
 describe('utils', () => {
 
