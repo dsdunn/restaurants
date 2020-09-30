@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.io/dsdunn/restaurants",
+  "homepage": "https://dsdunn.github.io/restaurants/",
   "dependencies": {
     "@material-ui/core": "^4.9.14",
     "@material-ui/lab": "^4.0.0-alpha.53",
