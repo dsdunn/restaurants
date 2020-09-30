@@ -1,4 +1,4 @@
-A simple Web application to view and filter restaurant results. 
+A simple Web application to view and filter restaurant results. It's live at https://dsdunn.github.io/restaurants thanks to github pages and Travis CI. 
 
 For dev:
 Clone this repo, 
