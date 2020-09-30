@@ -8,6 +8,7 @@ cache:
     - .cache
 script:
   - npm run build # Generate static HTML files
+  - npm test
 
 # Here is the magic part
 deploy:

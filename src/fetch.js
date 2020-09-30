@@ -1,4 +1,4 @@
-let key = 'q3MNxtfep8Gt';
+let key = process.env.REACT_APP_API_KEY;
 
 const fetchData = async (endpoint, method = 'GET') => {
   let response = await fetch(`https://code-challenge.spectrumtoolbox.com/api/${endpoint}`, {
