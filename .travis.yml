@@ -18,7 +18,7 @@ deploy:
   # Directory where your generated files are located
   local_dir: public
   # Github security/auth token
-  token: $DEPLOY_TOKEN
+  github_token: $DEPLOY_TOKEN
   edge: true
   # Incremental commit to keep old build/files from previous deployments
   keep-history: true
